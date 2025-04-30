@@ -1,0 +1,370 @@
+{
+	"stations": [
+		{
+			"id": "C1",
+			"name": "Logger",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 10, "y": 100 }
+		},
+		{
+			"id": "C2",
+			"name": "Tag",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 60, "y": 100 }
+		},
+		{
+			"id": "C3",
+			"name": "Repository",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 110, "y": 100 }
+		},
+		{
+			"id": "C4",
+			"name": "File",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 160, "y": 100 }
+		},
+		{
+			"id": "C5",
+			"name": "Attachment",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 210, "y": 100 }
+		},
+		{
+			"id": "F1",
+			"name": "In-Memory",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 85, "y": 150 }
+		},
+		{
+			"id": "F2",
+			"name": "Drizzle/Postgres",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 135, "y": 150 }
+		},
+		{
+			"id": "A1",
+			"name": "Input",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 10, "y": 50 }
+		},
+		{
+			"id": "A2",
+			"name": "Model",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 60, "y": 50 }
+		},
+		{
+			"id": "A3",
+			"name": "Provider",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 160, "y": 50 }
+		},
+		{
+			"id": "A4",
+			"name": "Prompt",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 210, "y": 50 }
+		},
+		{
+			"id": "A5",
+			"name": "Producers",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 110, "y": 50 }
+		},
+		{
+			"id": "P1",
+			"name": "Text",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 110, "y": 25 }
+		},
+		{
+			"id": "P2",
+			"name": "Embeddings",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 110, "y": 0 }
+		},
+		{
+			"id": "P3",
+			"name": "Image",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 110, "y": -25 }
+		},
+		{
+			"id": "P4",
+			"name": "Object",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 110, "y": -50 }
+		},
+		{
+			"id": "L1",
+			"name": "Input",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": -40, "y": -75 }
+		},
+		{
+			"id": "L2",
+			"name": "Role",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 10, "y": -75 }
+		},
+		{
+			"id": "L3",
+			"name": "Chat",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 60, "y": -75 }
+		},
+		{
+			"id": "L4",
+			"name": "Response",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 160, "y": -90 }
+		},
+		{
+			"id": "L5",
+			"name": "Error",
+			"type": "terminus",
+			"size": 3,
+			"gridCoords": { "x": 160, "y": -60 }
+		},
+		{
+			"id": "L6",
+			"name": "Producers",
+			"type": "normal",
+			"size": 2,
+			"gridCoords": { "x": 110, "y": -75 }
+		}
+	],
+	"lines": [
+		{
+			"id": "Core",
+			"name": "Core",
+			"color": "#008000",
+			"width": 4,
+			"style": "solid",
+			"points": {
+				"pC1": {
+					"type": "station",
+					"stationId": "C1",
+					"gridCoords": { "x": 10, "y": 100 }
+				},
+				"pC2": {
+					"type": "station",
+					"stationId": "C2",
+					"gridCoords": { "x": 60, "y": 100 }
+				},
+				"pC3": {
+					"type": "station",
+					"stationId": "C3",
+					"gridCoords": { "x": 110, "y": 100 }
+				},
+				"pC4": {
+					"type": "station",
+					"stationId": "C4",
+					"gridCoords": { "x": 160, "y": 100 }
+				},
+				"pC5": {
+					"type": "station",
+					"stationId": "C5",
+					"gridCoords": { "x": 210, "y": 100 }
+				}
+			},
+			"segments": [
+				{ "from": "pC1", "to": "pC2" },
+				{ "from": "pC2", "to": "pC3" },
+				{ "from": "pC3", "to": "pC4" },
+				{ "from": "pC4", "to": "pC5" }
+			]
+		},
+		{
+			"id": "Feeder",
+			"name": "Feeder",
+			"color": "#90EE90",
+			"width": 3,
+			"style": "solid",
+			"points": {
+				"pF1": {
+					"type": "station",
+					"stationId": "F1",
+					"gridCoords": { "x": 85, "y": 150 }
+				},
+				"pF2": {
+					"type": "station",
+					"stationId": "F2",
+					"gridCoords": { "x": 135, "y": 150 }
+				},
+				"pFY": {
+					"type": "junction",
+					"gridCoords": { "x": 110, "y": 125 }
+				},
+				"pC3": {
+					"type": "station",
+					"stationId": "C3",
+					"gridCoords": { "x": 110, "y": 100 }
+				}
+			},
+			"segments": [
+				{ "from": "pF1", "to": "pFY" },
+				{ "from": "pF2", "to": "pFY" },
+				{ "from": "pFY", "to": "pC3" }
+			]
+		},
+		{
+			"id": "AI",
+			"name": "AI",
+			"color": "#800080",
+			"width": 4,
+			"style": "solid",
+			"points": {
+				"pA1": {
+					"type": "station",
+					"stationId": "A1",
+					"gridCoords": { "x": 10, "y": 50 }
+				},
+				"pA2": {
+					"type": "station",
+					"stationId": "A2",
+					"gridCoords": { "x": 60, "y": 50 }
+				},
+				"pA5": {
+					"type": "station",
+					"stationId": "A5",
+					"gridCoords": { "x": 110, "y": 50 }
+				},
+				"pA3": {
+					"type": "station",
+					"stationId": "A3",
+					"gridCoords": { "x": 160, "y": 50 }
+				},
+				"pA4": {
+					"type": "station",
+					"stationId": "A4",
+					"gridCoords": { "x": 210, "y": 50 }
+				}
+			},
+			"segments": [
+				{ "from": "pA1", "to": "pA2" },
+				{ "from": "pA2", "to": "pA5" },
+				{ "from": "pA5", "to": "pA3" },
+				{ "from": "pA3", "to": "pA4" }
+			]
+		},
+		{
+			"id": "AiPipeline",
+			"name": "AiPipeline",
+			"color": "#000080",
+			"width": 4,
+			"style": "solid",
+			"points": {
+				"pL1": {
+					"type": "station",
+					"stationId": "L1",
+					"gridCoords": { "x": -40, "y": -75 }
+				},
+				"pL2": {
+					"type": "station",
+					"stationId": "L2",
+					"gridCoords": { "x": 10, "y": -75 }
+				},
+				"pL3": {
+					"type": "station",
+					"stationId": "L3",
+					"gridCoords": { "x": 60, "y": -75 }
+				},
+				"pL6": {
+					"type": "station",
+					"stationId": "L6",
+					"gridCoords": { "x": 110, "y": -75 }
+				},
+				"pA5": {
+					"type": "station",
+					"stationId": "A5",
+					"gridCoords": { "x": 110, "y": 50 }
+				},
+				"pLY": {
+					"type": "junction",
+					"gridCoords": { "x": 135, "y": -75 }
+				},
+				"pL4": {
+					"type": "station",
+					"stationId": "L4",
+					"gridCoords": { "x": 160, "y": -90 }
+				},
+				"pL5": {
+					"type": "station",
+					"stationId": "L5",
+					"gridCoords": { "x": 160, "y": -60 }
+				}
+			},
+			"segments": [
+				{ "from": "pL6", "to": "pA5" },
+				{ "from": "pL1", "to": "pL2" },
+				{ "from": "pL2", "to": "pL3" },
+				{ "from": "pL3", "to": "pL6" },
+				{ "from": "pL6", "to": "pLY" },
+				{ "from": "pLY", "to": "pL4" },
+				{ "from": "pLY", "to": "pL5" }
+			]
+		},
+		{
+			"id": "Producers",
+			"name": "Producers",
+			"color": "#FFA500",
+			"width": 5,
+			"style": "solid",
+			"points": {
+				"pA5": {
+					"type": "station",
+					"stationId": "A5",
+					"gridCoords": { "x": 110, "y": 50 }
+				},
+				"pP1": {
+					"type": "station",
+					"stationId": "P1",
+					"gridCoords": { "x": 110, "y": 25 }
+				},
+				"pP2": {
+					"type": "station",
+					"stationId": "P2",
+					"gridCoords": { "x": 110, "y": 0 }
+				},
+				"pP3": {
+					"type": "station",
+					"stationId": "P3",
+					"gridCoords": { "x": 110, "y": -25 }
+				},
+				"pP4": {
+					"type": "station",
+					"stationId": "P4",
+					"gridCoords": { "x": 110, "y": -50 }
+				}
+			},
+			"segments": [
+				{ "from": "pA5", "to": "pP1" },
+				{ "from": "pP1", "to": "pP2" },
+				{ "from": "pP2", "to": "pP3" },
+				{ "from": "pP3", "to": "pP4" }
+			]
+		}
+	]
+}
